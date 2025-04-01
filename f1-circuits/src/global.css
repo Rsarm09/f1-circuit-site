@@ -1,0 +1,149 @@
+@import url("https://use.typekit.net/odn2eai.css");
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #d90429;
+    --background-color: #0a0a0a;
+    --text-color: #e0e0e0;
+    --accent-color: #ffcc00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, p {
+    font-family: 'elza-narrow', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-weight: 300;   
+}
+
+h3, h4, h5, h6 {
+    font-family: 'elza-narrow', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+h1 {
+    font-family: "zuume-edge", sans-serif;
+    font-style: italic;    
+    color: var(--primary-color);
+}
+
+
+h2 {
+    font-family: 'Zen dots', sans-serif;
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+h4 {
+    font-size: 1.7rem;
+}
+
+body {
+    font-size: 1rem;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    overflow-x: hidden;
+
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+img {
+    margin: 1rem 0;
+    width: 100%;
+
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+button {
+    font-family: 'Zen dots', sans-serif;
+    width: 50%;
+    padding: 1rem;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 1rem;
+    border-radius: 0;
+}
+
+button:hover {
+    background: var(--accent-color);
+    color: var(--secondary-color);
+}
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease-in-out;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+.full-btn {
+    width: 100%;
+  }
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    background: var(--secondary-color);
+    color: var(--primary-color, #fff);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 1rem;
+}
+
+.close-button:hover {
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}

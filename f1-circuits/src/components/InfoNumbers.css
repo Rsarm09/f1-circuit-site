@@ -1,0 +1,35 @@
+.box-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.box-graphic {
+    width: 100%;
+    height: auto;
+}
+
+
+.stats-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-54%, -50%);
+    display: flex;
+    gap: 10rem; 
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.stat-label {
+    font-size: 2rem;
+    color: white;
+    opacity: 0.8;
+}

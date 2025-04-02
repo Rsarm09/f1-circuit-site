@@ -1,14 +1,17 @@
-import React from 'react'
-import Hero from '../components/Hero';
+import React from 'react';
 import '../global.css';
-import '../components/Hero.css'
-import bgvid from '/bgvid-f1site.mp4'
+
+import Hero from '../components/Hero';
+import InfoNumbers from '../components/InfoNumbers';
+import Paragraph from '../components/Paragraph';
+
 
 export default function Home() {
     return (
         <div className='container'>
             <Hero />
-
+            <InfoNumbers />
+            <Paragraph />
         </div>
     )
 }

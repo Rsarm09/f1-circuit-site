@@ -1,0 +1,25 @@
+.gallery-section {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gallery-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.gallery-container {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    gap: 1rem;
+    
+}
+
+.gallery-image {
+    height: 90vh;
+    margin-left: 10rem;
+}

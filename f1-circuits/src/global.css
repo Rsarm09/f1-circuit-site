@@ -1,6 +1,20 @@
 @import url("https://use.typekit.net/odn2eai.css");
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for Firefox */
+  * {
+    scrollbar-width: none;
+  }
+  
+  /* Hide scrollbar for Internet Explorer and Edge */
+  html {
+    -ms-overflow-style: none;
+  }
+
 :root {
     --primary-color: #ffffff;
     --secondary-color: #d90429;

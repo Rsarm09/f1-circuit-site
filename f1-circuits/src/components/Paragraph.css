@@ -1,8 +1,7 @@
 p {
-    font-size: 2rem;
+    font-size: clamp(1rem, 3vw, 2.5rem);
     font-weight: 400;
     color: white;
-    text-align: center;
     line-height: 1.5;
 }
 
@@ -16,6 +15,11 @@ p {
 
 .text-container img {
     width: 100%;
+    height: auto; 
+}
+
+.text-container {
+    margin-top: 10rem;
 }
 
 .paragraph-container {
@@ -23,6 +27,28 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
-    padding: 2rem;
+    width: 60%; 
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .paragraph-container {
+        width: 80%; 
+        padding: 1rem; 
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .paragraph-container {
+        width: 90%; 
+        padding: 1rem;
+    }
+
+    p {
+        font-size: 1.2rem; 
+    }
 }

@@ -55,3 +55,11 @@ video {
     align-items: flex-start; 
     padding-left: 10%;
 }
+
+.main-title,
+.subtitle,
+.subtitle-desc {
+  opacity: 0;
+  transform: translateY(30px); /* will be overridden by GSAP anyway */
+}   
+

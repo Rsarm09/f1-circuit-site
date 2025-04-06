@@ -1,0 +1,49 @@
+.loading-screen {
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .loading-svg {
+    width: 30%;
+    height: auto;
+    filter: 
+        drop-shadow(0 0 5px #ffbebe)
+        drop-shadow(0 0 10px #ff1e00)
+        drop-shadow(0 0 20px #ff1e00)
+        drop-shadow(0 0 40px #ff1e00);
+  }
+  
+  .loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  .loading-text {
+    color: #fff;
+    font-family: 'Zen dots', sans-serif;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    background: none;
+    position: relative;
+
+    filter: 
+    drop-shadow(0 0 5px #ffbebe)
+    drop-shadow(0 0 5px #ff1e00)
+    drop-shadow(0 0 10px #ff1e00)
+    drop-shadow(0 0 30px #ff1e00);
+    
+  }
+
+
+  

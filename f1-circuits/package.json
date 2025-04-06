@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "flag-icons": "^7.3.2",
+    "framer-motion": "^12.6.3",
     "gsap": "^3.12.7",
     "lenis": "^1.2.3",
     "normalize.css": "^8.0.1",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
+    "react-intersection-observer": "^9.16.0",
     "split-type": "^0.3.4"
   },
   "devDependencies": {

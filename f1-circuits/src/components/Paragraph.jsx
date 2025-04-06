@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./Paragraph.css";
-import textgraphic from "/graphics/textgraphic.svg";
+import textgraphic from "/graphics/paragraphgraphic.svg";
 import gsap from "gsap";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

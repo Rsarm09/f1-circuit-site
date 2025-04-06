@@ -27,19 +27,21 @@ export default function Gallery() {
   useEffect(() => {
     let totalWidth = 0;
 
+    // Calculate the total width of all images in the gallery
     imageRefs.current.forEach((img) => {
       if (img) totalWidth += img.offsetWidth;
     });
 
+    // Animate the gallery from left to right
     gsap.to(imageContainerRef.current, {
-      x: -totalWidth + window.innerWidth, 
+      x: -(totalWidth - window.innerWidth),  // Move gallery from left to right
       ease: "power2.out",
       scrollTrigger: {
         trigger: '.gallery-section',
         start: 'top top',
-        end: () => `+=${totalWidth}`, 
+        end: () => `+=${totalWidth}`,
         scrub: 3,
-        pin: true
+        pin: true,
       }
     });
   }, []);
@@ -53,7 +55,7 @@ export default function Gallery() {
               src={item.image}
               alt={item.name}
               className="gallery-image"
-              ref={(el) => (imageRefs.current[index] = el)} // Assign each img a ref
+              ref={(el) => (imageRefs.current[index] = el)}
             />
           </div>
         ))}

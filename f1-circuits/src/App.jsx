@@ -1,12 +1,28 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { ReactLenis, useLenis } from 'lenis/react'
+import { ReactLenis, useLenis } from 'lenis/react';
+
+import LoadingScreen from './components/LoadingScreen';
+
+
 
 import Home from './pages/Home';
 import './global.css';
 
 
 function App() {
+const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+      setTimeout
+      (() => {
+        setIsLoading(false);
+      }, 3000);
+  }, [])
+
+  if(isLoading) {
+    return <LoadingScreen />
+  }
 
   return (
     <ReactLenis root>

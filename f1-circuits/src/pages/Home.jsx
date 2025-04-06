@@ -8,6 +8,8 @@ import Paragraph from '../components/Paragraph';
 import Gallery from '../components/Gallery';
 import TitleCardComponent from '../components/TitleCard';
 
+import "/node_modules/flag-icons/css/flag-icons.min.css";
+
 
 export default function Home() {
     return (
@@ -17,7 +19,7 @@ export default function Home() {
             <Paragraph />
             <Gallery />
             <div className='title-card'>
-                <TitleCardComponent name='monza' location='Autodromo Nazionale di Monza' year='1921'/>
+                <TitleCardComponent name='monza' location='Autodromo Nazionale di Monza' year='1921' flag='it'/>
             </div>
         </div>
     )

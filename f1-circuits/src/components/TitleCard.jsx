@@ -13,7 +13,7 @@ export default function TitleCardComponent({ name, location, flag, year }) {
       xmlns="http://www.w3.org/2000/svg"
       className="title-card-svg"
       initial={{ opacity: 0, scale: 0.98 }}
-      whileInView={{ opacity: 1, scale: 1 }} // Animates when in view
+      whileInView={{ opacity: 1, scale: 1.20 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
     >
       {/* Replaced SVG Paths */}

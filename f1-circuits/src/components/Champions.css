@@ -1,0 +1,32 @@
+.champions-container {
+    position: relative;
+    width: 80vw;
+    height: 100vh;
+    display: flex; /* 🔄 Use flex to control layout */
+  }
+  
+  .crt-image {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+    align-self: flex-end;
+    order: 2;
+  }
+  
+  .overlay-text {
+    width: 60%;
+    z-index: 3;
+    color: white;
+    font-family: 'Zen Dots', sans-serif;
+    line-height: 1;
+    font-size: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  

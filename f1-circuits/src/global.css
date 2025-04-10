@@ -8,6 +8,7 @@
   /* Hide scrollbar for Firefox */
   * {
     scrollbar-width: none;
+    cursor: none;
   }
   
   /* Hide scrollbar for Internet Explorer and Edge */
@@ -30,7 +31,7 @@
     box-sizing: border-box;
 }
 
-body, p {
+html, body, p {
     font-family: 'elza-narrow', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -72,6 +73,7 @@ p {
     width: 100%;
     margin: auto;
     overflow-x: hidden;
+    background-color: #000000;
 
 }
 

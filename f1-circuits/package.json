@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/shape-image": "^3.8.1",
+    "@tsparticles/slim": "^3.8.1",
     "flag-icons": "^7.3.2",
     "framer-motion": "^12.6.3",
     "gsap": "^3.12.7",

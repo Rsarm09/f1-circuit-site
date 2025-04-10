@@ -1,0 +1,60 @@
+  
+  .parallaxgallery-container {
+    height: 260vh; 
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 5rem 0;
+    align-items: center;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width: 80%;
+    max-width: 35%;
+    height: 100%;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .image-left {
+    align-self: flex-start;
+    margin-left: 10%;
+  }
+  
+  .image-center {
+    align-self: center;
+  }
+  
+  .image-right {
+    align-self: flex-end;
+    margin-right: 10%;
+  }
+
+  .preview-img,
+  .preview-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+  }
+  
+  .preview-video {
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .image-wrapper:hover .preview-video {
+    opacity: 1;
+  }
+  
+  .image-wrapper:hover .preview-img {
+    opacity: 0;
+  }
+  
+  
+  

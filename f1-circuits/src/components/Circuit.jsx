@@ -2,7 +2,7 @@ import React from 'react';
 import './Stats.css';
 import TrackMap from './TrackMap';
 
-export default function Circuit({ title, desc, pathData, points, drszones  }) {
+export default function Circuit({ title, desc, pathData, points, drszones, setCursorHidden  }) {
 
     
 
@@ -19,6 +19,7 @@ export default function Circuit({ title, desc, pathData, points, drszones  }) {
             pathData={pathData}
             points={points}
             drszones={drszones}
+            setCursorHidden={setCursorHidden}
           />
             </div>
       </div>

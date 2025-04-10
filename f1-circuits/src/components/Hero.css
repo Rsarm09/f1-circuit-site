@@ -14,7 +14,8 @@ video {
     left: 50%;
     transform: translate(-50%, -40%);
     color: white;
-    background: linear-gradient(180deg, rgba(120, 120, 120, 0.00) 0%, rgba(18, 18, 18, 0.80) 81.5%);
+    background: linear-gradient(180deg, rgba(120, 120, 120, 0.00) 0%, rgba(0, 0, 0, 0.8) 81.5%);
+    visibility: hidden;
 
 }
 

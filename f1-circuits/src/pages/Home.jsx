@@ -13,6 +13,8 @@ import ParallaxImage from '../components/ParallaxImage';
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import Monza from '/images/Monza.jpg';
 import Circuit from '../components/Circuit';
+import ParallaxGallery from '../components/ParallaxGallery';
+import Champions from '../components/Champions';
 
 const monzaPath = `M8.50007 44C31.9035 20.5965 140.5 3.76367 155.835 3.76367C171.17 3.76367 233.424 141.296 255.962 169.148C278.5 197 500.944 387.963 509.076 396.105C526 405 539.5 374.5 564.5 386.5C590.398 402.5 568.5 418.5 590.398 419.004C612.296 419.508 1013.5 419.004 1013.5 419.004C1039.93 419.004 1071.5 406 1076.8 453.608C1082.1 501.216 1021 522 975.151 525.359C929.302 528.718 420.004 532.991 389 534.009C357.996 535.026 389.5 516.5 386.5 504C383.5 491.5 351.5 515 338.5 523C332.401 530.634 282.549 553.598 218 548C153.451 542.403 138.218 498 135 468.5C132 441 100.435 268.458 100.435 245.479C100.435 222.5 59.0001 246.5 65.5001 215C72 183.5 -14.9034 67.4036 8.50007 44Z`;
 
@@ -59,8 +61,16 @@ const monzaPoints = [
   { x1: 400, y1: 532, x2: 900, y2: 525 } 
 ];
   
+const images = [
+    {imageSrc: '/images/Monza.jpg', videoSrc: '/bgvid-f1site.mp4' },
+    {imageSrc: '/images/Monza.jpg', videoSrc: '/bgvid-f1site.mp4' },
+    {imageSrc: '/images/Monza.jpg', videoSrc: '/bgvid-f1site.mp4' },
+    {imageSrc: '/images/Monza.jpg', videoSrc: '/bgvid-f1site.mp4' },
 
-export default function Home() {
+  ];
+  
+
+export default function Home({setCursorHidden}) {
   return (
     <div className='container'>
       <Hero />
@@ -86,6 +96,7 @@ export default function Home() {
             { value: '1m', subValue: '19.813s', label: 'LAP RECORD', note: 'Charles Leclerc, 2020' }
           ]
         }}
+        
       />
 
       <Circuit
@@ -95,9 +106,12 @@ export default function Home() {
         viewBox="0 0 1078 559"
         points={monzaPoints}
         drszones={drszones}
-
-        
+        setCursorHidden={setCursorHidden}
       />
+
+      <ParallaxGallery images={images}/>
+
+      <Champions />
     </div>
   );
 }

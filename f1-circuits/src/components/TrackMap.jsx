@@ -10,7 +10,8 @@ const TrackMap = ({
     strokeColor = "#C90603",
     strokeWidth = 13,
     filterId = "track-shadow",
-    drszones = []
+    drszones = [],
+    setCursorHidden
 }) => {
     const [tooltip, setTooltip] = useState({ show: false, x: 0, y: 0, info: '' });
 
@@ -24,8 +25,19 @@ const TrackMap = ({
     const isInView = useInView(containerRef, { once: true, margin: '-100px' });
 
     const handleMouseEnter = (e, info) => {
-        updateTooltip(e, info);
+        const rect = containerRef.current.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const offsetY = e.clientY - rect.top;
+        setCursorHidden(true);
+
+        setTooltip({
+            show: true,
+            info,
+            x: offsetX,
+            y: offsetY - 20,
+        });
     };
+
 
     const handleMouseMove = (e) => {
         updateTooltip(e);
@@ -44,6 +56,8 @@ const TrackMap = ({
 
     const handleMouseLeave = () => {
         setTooltip({ show: false, x: 0, y: 0, info: '' });
+        setCursorHidden(false);
+
     };
 
     return (
@@ -87,7 +101,9 @@ const TrackMap = ({
 
                     const dx = zone.x2 - zone.x1;
                     const dy = zone.y2 - zone.y1;
-                    const length = Math.sqrt(dx * dx + dy * dy);
+
+                    const midX = (zone.x1 + zone.x2) / 2;
+                    const midY = (zone.y1 + zone.y2) / 2;
 
                     return (
                         <React.Fragment key={`drs-${i}`}>
@@ -100,6 +116,7 @@ const TrackMap = ({
                             </defs>
 
                             <motion.line
+                                className="drs-zone"
                                 x1={zone.x1}
                                 y1={zone.y1}
                                 x2={zone.x2}
@@ -114,6 +131,23 @@ const TrackMap = ({
                                     filter: 'drop-shadow(0 0 8px #00FF88)',
                                 }}
                             />
+
+                            <motion.text
+                                x={midX}
+                                y={midY - 10} 
+                                textAnchor="middle"
+                                fill="#00FF88"
+                                fontSize="14"
+                                initial={{ opacity: 0 }}
+                                animate={isInView ? { opacity: 1 } : {}}
+                                transition={{ delay: 2.4 + i * 0.1, duration: 0.5 }}
+                                style={{
+                                    pointerEvents: 'none',
+                                    filter: 'drop-shadow(0 0 2px #00FF88)',
+                                }}
+                            >
+                                {zone.label || 'DRS ZONE'}
+                            </motion.text>
                         </React.Fragment>
                     );
                 })}
@@ -125,17 +159,17 @@ const TrackMap = ({
                         key={index}
                         cx={point.x}
                         cy={point.y}
-                        r="8"
+                        r="10   "
                         fill="#111"
                         stroke="#fff"
                         strokeWidth="1"
-                        initial={{ opacity: 0, scale: 0.7 }}
+                        initial={{ opacity: 1, scale: 0.7 }}
                         animate={isInView
                             ? {
                                 opacity: 1,
                                 scale: [1.3, 1.5, 1.3],
                             }
-                            : {}
+                            : undefined
                         }
                         transition={{
                             delay: 2.4 + index * 0.1,
@@ -147,7 +181,7 @@ const TrackMap = ({
                         whileHover={{ scale: 2 }}
                         style={{
                             filter: 'drop-shadow(0 0 8px white)',
-                            cursor: 'none',
+                            cursor: 'crosshair'
                         }}
                         onMouseEnter={(e) => handleMouseEnter(e, point.info)}
                         onMouseMove={handleMouseMove}
@@ -162,10 +196,11 @@ const TrackMap = ({
                     <motion.div
                         className="track-tooltip"
                         style={{
-                            x: springX,
-                            y: springY,
+                            position: 'absolute',
+                            left: tooltip.x,
+                            top: tooltip.y,
                         }}
-                        initial={{ opacity: 0, scale: 0.9 }}
+                        initial={{ opacity: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.9 }}
                         transition={{ duration: 0.2, ease: 'easeOut' }}

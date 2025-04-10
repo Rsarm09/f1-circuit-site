@@ -11,15 +11,15 @@ p {
     display: flex;
     justify-content: center;
     align-items: center; 
+    background: none;
+    margin-top: 10rem;
 }
 
 .text-container img {
     width: 100%;
     height: auto; 
-}
+    background: none;
 
-.text-container {
-    margin-top: 10rem;
 }
 
 .paragraph-container {
@@ -29,6 +29,8 @@ p {
     transform: translate(-50%, -50%);
     width: 60%; 
     box-sizing: border-box;
+    background: none;
+
 }
 
 @media (max-width: 768px) {

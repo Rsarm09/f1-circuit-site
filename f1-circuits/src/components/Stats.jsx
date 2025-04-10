@@ -45,9 +45,33 @@ export default function Stats({ title, desc, progressData, telemetryData }) {
     return (
         <div className="desc-container" ref={containerRef}>
             <div className="desc">
-                <p className="topic-number">1</p>
-                <h3>{title}</h3>
-                <p className="information">{desc}</p>
+                <motion.p
+                    className="topic-number"
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 0 }}
+                >
+                    1
+                </motion.p>
+
+                <motion.h3
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                    {title}
+                </motion.h3>
+
+                <motion.p
+                    className="information"
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                    {desc}
+                </motion.p>
+
+
                 <div className="telemetry-meters">
                     {telemetryData?.circular?.map((meter, index) => (
                         <SemiCircleMeter

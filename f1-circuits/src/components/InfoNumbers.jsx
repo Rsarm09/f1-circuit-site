@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import CountUp from 'react-countup';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useInView } from 'framer-motion';
 
 import infobox from '/graphics/infobox.svg';
 import './InfoNumbers.css';
@@ -9,7 +10,9 @@ import './InfoNumbers.css';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function InfoNumbers() {
-    const containerRef = useRef();
+    const containerRef = useRef(null);
+    const isInView = useInView(containerRef, { once: true, margin: '-100px' });
+    const [startCount, setStartCount] = useState(false);
 
     const stats = [
         { number: 75, label: "Years" },
@@ -18,6 +21,7 @@ export default function InfoNumbers() {
     ];
 
     useEffect(() => {
+        // GSAP fade-up effect
         gsap.fromTo(
             containerRef.current,
             { y: 100, opacity: 0 },
@@ -33,8 +37,14 @@ export default function InfoNumbers() {
                 },
             }
         );
-
     }, []);
+
+    // Trigger countup when in view
+    useEffect(() => {
+        if (isInView) {
+            setStartCount(true);
+        }
+    }, [isInView]);
 
     return (
         <div className='box-container' ref={containerRef}>
@@ -43,12 +53,14 @@ export default function InfoNumbers() {
                 {stats.map((stat, index) => (
                     <div key={index} className="stat-item">
                         <h2 className="stat-number">
-                            <CountUp
-                                start={0}
-                                end={stat.number}
-                                duration={3}
-                                delay={index * 0.2}
-                            />
+                            {startCount && (
+                                <CountUp
+                                    start={0}
+                                    end={stat.number}
+                                    duration={2.5}
+                                    delay={index * 0.2}
+                                />
+                            )}
                         </h2>
                         <p className="stat-label">{stat.label}</p>
                     </div>

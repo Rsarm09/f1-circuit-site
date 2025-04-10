@@ -46,3 +46,7 @@ text {
     100% { opacity: 1; }
   }
   
+.speed-graphic {
+    position: absolute;
+    width: 10%;
+}

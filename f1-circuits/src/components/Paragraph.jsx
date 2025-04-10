@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import "./Paragraph.css";
-import textgraphic from "/graphics/paragraphgraphic.svg";
 import gsap from "gsap";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import ParagraphGraphic from '/graphics/paragraphgraphic.svg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,7 +39,7 @@ export default function Paragraph() {
 
   return (
     <div ref={sectionRef} className="text-container">
-      <img src={textgraphic} alt="Text Graphic" />
+      <img src={ParagraphGraphic} alt="Text Graphic" />
       <div className="paragraph-container">
         <p ref={paragraphRef} className="reveal-type">
           These iconic circuits have not only hosted fierce rivalries and

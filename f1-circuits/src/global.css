@@ -15,10 +15,11 @@
     -ms-overflow-style: none;
   }
 
+
 :root {
     --primary-color: #ffffff;
     --secondary-color: #d90429;
-    --background-color: #121212;
+    --background-color: black;
     --text-color: #e0e0e0;
     --accent-color: #ffcc00;
 }
@@ -64,7 +65,7 @@ h4 {
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 0.7rem;
 }
 
 .container {

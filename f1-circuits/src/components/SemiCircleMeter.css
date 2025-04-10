@@ -1,0 +1,44 @@
+.semi-circle-container {
+    position: relative;
+    width: 300px;
+    height: 148px;
+    margin: 4rem 0.5rem;
+    background: none;
+}
+
+
+.semi-circle-labels {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+.main-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    background: none;
+    font-family: 'Zen dots', sans-serif;
+    line-height: 0.8;
+}
+
+.sub-value {
+    font-size: 1.4rem;
+    font-family: 'Zen dots', sans-serif;
+
+}
+
+.meter-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+}
+
+.meter-note {
+    font-size: 0.7rem;
+    opacity: 0.6;
+}

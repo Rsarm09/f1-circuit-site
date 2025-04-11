@@ -163,3 +163,20 @@ button:hover::before {
     color: var(--secondary-color);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
+
+.footer {
+    padding: 6rem 0 1rem 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1.5rem;
+
+}
+
+.footer-arrow:hover {
+    transform: translateY(-5px); 
+    transition: transform 0.3s ease;
+  }
+
+  

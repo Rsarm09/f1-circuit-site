@@ -21,7 +21,6 @@ export default function InfoNumbers() {
     ];
 
     useEffect(() => {
-        // GSAP fade-up effect
         gsap.fromTo(
             containerRef.current,
             { y: 100, opacity: 0 },
@@ -39,7 +38,6 @@ export default function InfoNumbers() {
         );
     }, []);
 
-    // Trigger countup when in view
     useEffect(() => {
         if (isInView) {
             setStartCount(true);

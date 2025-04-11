@@ -111,6 +111,13 @@ export default function Home({setCursorHidden}) {
       <ParallaxGallery images={images}/>
       
       <Champions desc={'Monza’s most iconic champions, Michael Schumacher and Lewis Hamilton, have each left an indelible mark on the Temple of Speed. With a combined 10 victories, they’ve defined eras of dominance through unmatched precision, relentless pace, and pure racing excellence on one of Formula 1’s fastest and most historic circuits.'}/>
+
+      <div className='footer'>
+        <div role='button' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <p className='footer-arrow'>↑</p>
+          <p>Race to the Top</p>
+        </div>
+      </div>
     </div>
   );
 }

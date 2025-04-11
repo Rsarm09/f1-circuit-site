@@ -10,7 +10,6 @@ import TitleCardComponent from '../components/TitleCard';
 import Stats from '../components/Stats';
 import ParallaxImage from '../components/ParallaxImage';
 
-import "/node_modules/flag-icons/css/flag-icons.min.css";
 import Monza from '/images/Monza.jpg';
 import Circuit from '../components/Circuit';
 import ParallaxGallery from '../components/ParallaxGallery';
@@ -101,7 +100,7 @@ export default function Home({setCursorHidden}) {
 
       <Circuit
         title="The Circuit"
-        desc='Built in 1921, Monza is one of the oldest and most iconic circuits in Formula 1 history. Known as the "Temple of Speed," its legendary high-speed straights and thrilling corners have been the stage for unforgettable moments, fierce rivalries, and historic victories.'
+        desc='Monza the Temple of Speed. Home to Formula 1’s fastest straights and fiercest fans. With minimal downforce and legendary corners like Ascari and Parabolica, it’s a track that rewards precision, bravery, and flat-out racing. A true icon of motorsport history.'
         pathData={monzaPath}
         viewBox="0 0 1078 559"
         points={monzaPoints}
@@ -110,8 +109,8 @@ export default function Home({setCursorHidden}) {
       />
 
       <ParallaxGallery images={images}/>
-
-      <Champions />
+      
+      <Champions desc={'Monza’s most iconic champions, Michael Schumacher and Lewis Hamilton, have each left an indelible mark on the Temple of Speed. With a combined 10 victories, they’ve defined eras of dominance through unmatched precision, relentless pace, and pure racing excellence on one of Formula 1’s fastest and most historic circuits.'}/>
     </div>
   );
 }

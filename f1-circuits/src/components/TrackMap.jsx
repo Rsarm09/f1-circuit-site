@@ -74,11 +74,6 @@ const TrackMap = ({
                         <stop offset="0%" stopColor="#A30015" />
                         <stop offset="100%" stopColor="#FF1E00" />
                     </linearGradient>
-                    <linearGradient id="drsLineGradient" x1="0" y1="0" x2="1" y2="0">
-                        <stop offset="0%" stopColor="transparent" />
-                        <stop offset="50%" stopColor="#00FF88" />
-                        <stop offset="100%" stopColor="transparent" />
-                    </linearGradient>
                 </defs>
 
                 <motion.path
@@ -159,9 +154,9 @@ const TrackMap = ({
                         key={index}
                         cx={point.x}
                         cy={point.y}
-                        r="10   "
+                        r="10"
                         fill="#111"
-                        stroke="#fff"
+                        stroke="#FF1E00"
                         strokeWidth="1"
                         initial={{ opacity: 1, scale: 0.7 }}
                         animate={isInView

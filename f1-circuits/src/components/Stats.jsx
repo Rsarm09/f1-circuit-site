@@ -76,7 +76,7 @@ export default function Stats({ title, desc, progressData, telemetryData }) {
                     {telemetryData?.circular?.map((meter, index) => (
                         <SemiCircleMeter
                             key={index}
-                            value={parseFloat(meter.value.replace(/[^0-9.]/g, ''))} // get numeric value
+                            value={parseFloat(meter.value.replace(/[^0-9.]/g, ''))}
                             label={meter.label}
                             subValue={meter.subValue}
                             note={meter.note}
@@ -108,7 +108,7 @@ export default function Stats({ title, desc, progressData, telemetryData }) {
                             strokeWidth="2"
                             d={wavePath}
                             animate={{
-                                x: [0, -200], // scrolls left
+                                x: [0, -200],
                             }}
                             transition={{
                                 duration: 3,

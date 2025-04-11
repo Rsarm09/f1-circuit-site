@@ -11,10 +11,9 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@tsparticles/engine": "^3.8.1",
-    "@tsparticles/react": "^3.0.0",
-    "@tsparticles/shape-image": "^3.8.1",
-    "@tsparticles/slim": "^3.8.1",
+    "@react-three/drei": "^10.0.6",
+    "@react-three/fiber": "^9.1.2",
+    "dat.gui": "^0.7.9",
     "flag-icons": "^7.3.2",
     "framer-motion": "^12.6.3",
     "gsap": "^3.12.7",
@@ -24,7 +23,8 @@
     "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
     "react-intersection-observer": "^9.16.0",
-    "split-type": "^0.3.4"
+    "split-type": "^0.3.4",
+    "three": "^0.175.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

@@ -61,11 +61,10 @@ const monzaPoints = [
 ];
   
 const images = [
-    {imageSrc: '/images/Monza.jpg', videoSrc: '/bgvid-f1site.mp4' },
-    {imageSrc: '/images/Monza.jpg', videoSrc: '/bgvid-f1site.mp4' },
-    {imageSrc: '/images/Monza.jpg', videoSrc: '/bgvid-f1site.mp4' },
-    {imageSrc: '/images/Monza.jpg', videoSrc: '/bgvid-f1site.mp4' },
-
+    {imageSrc: '/images/SebMonzaWin.jpg',alt: "Sebastian Vettel's first win in Monza", videoSrc: '/SebMonzaVid.mp4', description: 'In 2008, at a rain-soaked Monza, a 21-year-old Sebastian Vettel stunned the world by winning his first Formula 1 race. Driving for Toro Rosso, he became the youngest-ever winner at the time and gave the team its only victory.' },
+    {imageSrc: '/images/HamVersCrash.jpg', videoSrc: '/HamVersCrashVid.mp4', description: "During the 2021 Formula 1 Italian Grand Prix, title rivals Max Verstappen and Lewis Hamilton collided in one of the most controversial moments of the season. The title rivals tangled dramatically at Turn 1, with Max’s car ending up on top of Lewis', his rear tire grazing Hamilton's helmet." },
+    {imageSrc: '/images/MSMonza.jpg', videoSrc: '/MSMonza.mp4', description: "Michael Schumacher's first win at Monza came in 1996, during his debut season with Scuderia Ferrari. Despite Ferrari’s car being less competitive in the 1996 season, Schumacher outperformed expectations, managing tricky race conditions and fending off rivals with precision and determination." },
+    {imageSrc: '/images/PierreMonza.jpg', videoSrc: '/PierreMonza.mp4', description: "Racing for the midfield AlphaTauri team, Gasly pulled off a stunning underdog win holding off intense pressure from Carlos Sainz in the final laps. Gasly kept his composure and crossed the line just 0.4 seconds ahead, making history as the first French winner of a Grand Prix since 1996." },
   ];
   
 
@@ -79,14 +78,13 @@ export default function Home({setCursorHidden}) {
       <div className='title-card'>
         <TitleCardComponent name='monza' location='Autodromo Nazionale di Monza' year='1921' flag='it' />
       </div>
-      <ParallaxImage image={Monza} title="monza" />
       <Stats
         title="The Temple of Speed"
         desc='Built in 1921, Monza is one of the oldest and most iconic circuits in Formula 1 history. Known as the "Temple of Speed," its legendary high-speed straights and thrilling corners have been the stage for unforgettable moments, fierce rivalries, and historic victories.'
         progressData={[
           { label: 'Fast Corners', value: 80 },
           { label: 'High Speed', value: 75 },
-          { label: 'Iconic Circuit', value: 90 },
+          { label: 'Iconic Circuit', value: 100 },
         ]}
         telemetryData={{
           circular: [
@@ -95,8 +93,8 @@ export default function Home({setCursorHidden}) {
             { value: '1m', subValue: '19.813s', label: 'LAP RECORD', note: 'Charles Leclerc, 2020' }
           ]
         }}
-        
       />
+      <ParallaxImage image={Monza} title="monza" />
 
       <Circuit
         title="The Circuit"
@@ -108,7 +106,7 @@ export default function Home({setCursorHidden}) {
         setCursorHidden={setCursorHidden}
       />
 
-      <ParallaxGallery images={images}/>
+      <ParallaxGallery images={images} setCursorHidden={setCursorHidden} />
       
       <Champions desc={'Monza’s most iconic champions, Michael Schumacher and Lewis Hamilton, have each left an indelible mark on the Temple of Speed. With a combined 10 victories, they’ve defined eras of dominance through unmatched precision, relentless pace, and pure racing excellence on one of Formula 1’s fastest and most historic circuits.'}/>
 

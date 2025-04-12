@@ -4,7 +4,7 @@ import gsap from "gsap";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import ParagraphGraphic from '/graphics/paragraphgraphic.svg'
+import ParagraphGraphic from '/graphics/paragraphgraphic.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 

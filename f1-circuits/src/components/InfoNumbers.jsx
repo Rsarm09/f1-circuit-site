@@ -46,7 +46,7 @@ export default function InfoNumbers() {
 
     return (
         <div className='box-container' ref={containerRef}>
-            <img src={infobox} alt="" className='box-graphic' />
+            <img src={infobox} alt="information box" className='box-graphic' />
             <section className="stats-container">
                 {stats.map((stat, index) => (
                     <div key={index} className="stat-item">

@@ -27,12 +27,18 @@ export default function Gallery() {
   const imageRefs = useRef([]);
 
   useEffect(() => {
-    let totalWidth = 0;
 
     // Calculate the total width of all images in the gallery
+    let totalWidth = 0;
+
     imageRefs.current.forEach((img) => {
-      if (img) totalWidth += img.offsetWidth;
+      if (img) {
+        const style = getComputedStyle(img);
+        const marginRight = parseFloat(style.marginRight) || 0;
+        totalWidth += img.offsetWidth + marginRight;
+      }
     });
+    
 
     // Animate the gallery from left to right
     gsap.to(imageContainerRef.current, {

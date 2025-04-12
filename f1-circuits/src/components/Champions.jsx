@@ -17,13 +17,9 @@ export default function Champions({ desc }) {
       </div>
       <div className="champions-container" ref={containerRef}>
         <div className="overlay-text">
-          <motion.h4
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isInView ? [0, 0.2, 0.05, 0.7, 0.3, 1] : 0 }}
-            transition={{ duration: 1.5, ease: 'easeInOut' }}
-          >
+          <h4>
             Michael<br />Schumacher
-          </motion.h4>
+          </h4>
 
         </div>
         <div className="crt-wrapper">
@@ -32,8 +28,8 @@ export default function Champions({ desc }) {
               src="/images/MichaelSchumacher.png"
               alt="Michael Schumacher"
               initial={{ opacity: 0 }}
-              animate={{ opacity: isInView ? [0, 0.2, 0.05, 0.6, 0.1, 1] : 0 }}
-              transition={{ duration: 1.8, ease: 'easeInOut' }}
+              animate={{ opacity: isInView ? [0, 0.2, 0.1, 1] : 0 }}
+              transition={{ duration: 1, ease: 'easeInOut' }}
             />
 
             <div className="terminal-panel">
@@ -61,8 +57,8 @@ export default function Champions({ desc }) {
               src="/images/LewisHamilton.png"
               alt="Lewis Hamilton"
               initial={{ opacity: 0 }}
-              animate={{ opacity: isInView ? [0, 0.2, 0.05, 0.6, 0.1, 1] : 0 }}
-              transition={{ duration: 1.8, ease: 'easeInOut' }}
+              animate={{ opacity: isInView ? [0, 0.2, 0.1, 1] : 0 }}
+              transition={{ duration: 1, ease: 'easeInOut' }}
             />
 
               <div className="terminal-panel">
@@ -82,13 +78,9 @@ export default function Champions({ desc }) {
           </div>
 
           <div className="overlay-text-2">
-          <motion.h4
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isInView ? [0, 0.2, 0.05, 0.7, 0.3, 1] : 0 }}
-            transition={{ duration: 1.5, ease: 'easeInOut' }}
-          >
+          <h4>
             Lewis<br />Hamilton
-          </motion.h4>
+          </h4>
           </div>
         </div>
 

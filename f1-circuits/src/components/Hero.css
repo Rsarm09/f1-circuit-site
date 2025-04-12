@@ -16,6 +16,8 @@ video {
     color: white;
     background: linear-gradient(180deg, rgba(120, 120, 120, 0.00) 0%, rgba(0, 0, 0, 0.8) 81.5%);
     visibility: hidden;
+    overflow: visible;
+
 
 }
 
@@ -65,27 +67,52 @@ video {
   transform: translateY(30px); 
 }   
 
-.scroll-down-btn {
-    position: absolute; 
-    left: 50%; 
-    scale: 130%;
-    animation: bounce 1.5s infinite;
-    font-size: 2rem;
-    background: transparent;
-    color: var(--primary-color);
-    z-index: 10;
-  }
-  
+.button-container {
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
 
-@keyframes bounce {
-    0%, 100% {
-      transform: translateX(-50%) translateY(0);
-    }
-    50% {
-      transform: translateX(-50%) translateY(10px);
-    }
-  }
+.chevron-scroll {
+  width: 2.5rem;
+  height: 6rem; /* give it breathing room */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
 
-  .button-container {
-    position: relative;
+
+.chevron {
+  transform-origin: center;
+  animation: chevronBounce 1.4s ease-in-out infinite;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 6px #ffffff);
+}
+
+.chevron-1 {
+  animation-delay: 0s;
+}
+.chevron-2 {
+  animation-delay: 0.2s;
+}
+.chevron-3 {
+  animation-delay: 0.4s;
+  overflow: visible;
+}
+
+@keyframes chevronBounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
   }
+  50% {
+    transform: translateY(8px) scale(1.05);
+    opacity: 1;
+  }
+}
+
+
+
+

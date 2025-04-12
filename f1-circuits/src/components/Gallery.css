@@ -16,7 +16,8 @@
     width: max-content;
     height: 100%;
     gap: 1rem;
-    
+    padding-right: 100vw; 
+
 }
 
 .gallery-image {

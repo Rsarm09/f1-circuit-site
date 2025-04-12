@@ -1,6 +1,7 @@
 svg {
     width: 100%;
     scale: 130%;
+    
 }
 
 text {
@@ -16,15 +17,18 @@ text {
 
 .text-location {
     font-size: 2rem;
+    font-family: 'elza-narrow', sans-serif;
+
 }
 
 .est {
     font-size: 2rem;
+    font-family: 'elza-narrow', sans-serif;
 }
 
 .text-year {
     font-size: 4rem;
-    animation: flicker 3s linear infinite;
+    animation: flicker-titlecard 3s linear infinite;
 
 }
 
@@ -32,10 +36,10 @@ text {
     font-size: 48px;
     font-weight: 700;
     text-transform: uppercase;
-    animation: flicker 3s linear infinite;
+    animation: flicker-titlecard 3s linear infinite;
   }
   
-  @keyframes flicker {
+  @keyframes flicker-titlecard {
     0% { opacity: 1; }
     5% { opacity: 0.8; }
     10% { opacity: 1; }

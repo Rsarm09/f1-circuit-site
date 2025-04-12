@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import './ParallaxImage.css';
+import './Champions.css'
+
 
 export default function ParallaxImage({ image, title }) {
   const containerRef = useRef(null);

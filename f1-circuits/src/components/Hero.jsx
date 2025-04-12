@@ -3,6 +3,8 @@ import { gsap } from 'gsap';
 import bgvid from '/bgvid-f1site.mp4';
 import '../global.css';
 import '../components/Hero.css';
+import './Champions.css'
+
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -33,6 +35,7 @@ export default function Hero() {
 
   return (
     <div className="container" ref={containerRef}>
+      <div className='overlay'></div>
       <video
         ref={videoRef}
         src={bgvid}
@@ -51,13 +54,21 @@ export default function Hero() {
         </div>
         <div className='button-container'>
           <div role='button' className="scroll-down-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-              <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+            <svg
+              className="chevron-scroll"
+              viewBox="0 0 1288 2389"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path className="chevron chevron-1" d="M643.86 924.14L0.36 408.75V0.65L643.86 516.04L1287.4 0.64V408.74L643.86 924.14Z" fill="white" />
+              <path className="chevron chevron-2" d="M643.86 1656.27L0.36 1140.88V732.78L643.86 1248.17L1287.4 732.77V1140.86L643.86 1656.27Z" fill="white" />
+              <path className="chevron chevron-3" d="M643.86 2388.4L0.36 1873V1464.91L643.86 1980.3L1287.4 1464.89V1872.99L643.86 2388.4Z" fill="white" />
             </svg>
+
           </div>
         </div>
       </div>
+      <div className='scanline'></div>
     </div>
   );
 }

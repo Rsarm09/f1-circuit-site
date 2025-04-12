@@ -6,30 +6,31 @@ p {
 }
 
 .text-container {
+    padding: 10rem 0;
     position: relative;
-    height: 100vh;
-    overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    background: none;
     margin-top: 10rem;
 }
 
 .text-container img {
-    position: absolute;
-    top: 10%;
-    left: 0;
-    object-fit: cover; 
-    z-index: 1;
+    width: 100%;
+    height: auto; 
+    background: none;
+
 }
 
 .paragraph-container {
-    position: relative;
-    z-index: 2;
-    width: 60%;
-    text-align: start;
-    color: white;
-    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; 
+    box-sizing: border-box;
+    background: none;
+
 }
 
 @media (max-width: 768px) {

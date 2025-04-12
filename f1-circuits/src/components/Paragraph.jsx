@@ -32,7 +32,6 @@
         },
       });
     
-      // Add this
       ScrollTrigger.refresh();
     
       return () => {

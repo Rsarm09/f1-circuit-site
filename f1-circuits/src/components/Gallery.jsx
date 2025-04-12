@@ -40,7 +40,7 @@ export default function Gallery() {
     
 
     gsap.to(imageContainerRef.current, {
-      x: -(totalWidth - window.innerWidth),
+      x: totalWidth - window.innerWidth,
       ease: "power2.out",
       scrollTrigger: {
         trigger: '.gallery-section',

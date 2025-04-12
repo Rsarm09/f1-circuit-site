@@ -107,7 +107,7 @@ export default function Home({setCursorHidden}) {
       <Hero />
       <InfoNumbers />
       <Paragraph />
-      <Gallery />
+      {/* <Gallery /> */}
       <div className='title-card'>
         <TitleCardComponent name='monza' location='Autodromo Nazionale di Monza' year='1921' flag='it' />
       </div>

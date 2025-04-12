@@ -20,22 +20,27 @@ export default function Paragraph() {
     gsap.from(splitText.words, {
       opacity: 0.1,
       stagger: 0.6,
-      duration: 2, 
+      duration: 2,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: sectionRef.current, 
+        trigger: sectionRef.current,
         start: "top",
-        end: "+=100%", 
-        pin: true, 
+        end: "+=100%",
+        pin: true,
         scrub: true,
-        toggleActions: 'play play reverse reverse'
+        toggleActions: "play play reverse reverse",
       },
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
+  useEffect(() => {
+    ScrollTrigger.refresh();
+  }, []);
+
 
   return (
     <div ref={sectionRef} className="text-container">

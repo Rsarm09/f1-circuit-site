@@ -15,6 +15,19 @@ import Circuit from '../components/Circuit';
 import ParallaxGallery from '../components/ParallaxGallery';
 import Champions from '../components/Champions';
 
+//videos/images
+
+import SebMonzaVid from '/SebMonzaVid.mp4';
+import SebMonzaPic from '/images/SebMonzaWin.jpg';
+import HamVersCrashVid from '/HamVersCrashVid.mp4';
+import HamVersCrashPic from '/images/HamVersCrash.jpg';
+import MSMonzaVid from '/MSMonza.mp4';
+import MSMonzaPic from '/images/MSMonza.jpg';
+import PierreMonzaVid from '/PierreMonza.mp4';
+import PierreMonzaPic from '/images/PierreMonza.jpg';
+
+
+
 const monzaPath = `M8.50007 44C31.9035 20.5965 140.5 3.76367 155.835 3.76367C171.17 3.76367 233.424 141.296 255.962 169.148C278.5 197 500.944 387.963 509.076 396.105C526 405 539.5 374.5 564.5 386.5C590.398 402.5 568.5 418.5 590.398 419.004C612.296 419.508 1013.5 419.004 1013.5 419.004C1039.93 419.004 1071.5 406 1076.8 453.608C1082.1 501.216 1021 522 975.151 525.359C929.302 528.718 420.004 532.991 389 534.009C357.996 535.026 389.5 516.5 386.5 504C383.5 491.5 351.5 515 338.5 523C332.401 530.634 282.549 553.598 218 548C153.451 542.403 138.218 498 135 468.5C132 441 100.435 268.458 100.435 245.479C100.435 222.5 59.0001 246.5 65.5001 215C72 183.5 -14.9034 67.4036 8.50007 44Z`;
 
 
@@ -61,10 +74,27 @@ const monzaPoints = [
 ];
   
 const images = [
-    {imageSrc: '/images/SebMonzaWin.jpg',alt: "Sebastian Vettel's first win in Monza", videoSrc: '/SebMonzaVid.mp4', description: 'In 2008, at a rain-soaked Monza, a 21-year-old Sebastian Vettel stunned the world by winning his first Formula 1 race. Driving for Toro Rosso, he became the youngest-ever winner at the time and gave the team its only victory.' },
-    {imageSrc: '/images/HamVersCrash.jpg', videoSrc: '/HamVersCrashVid.mp4', description: "During the 2021 Formula 1 Italian Grand Prix, title rivals Max Verstappen and Lewis Hamilton collided in one of the most controversial moments of the season. The title rivals tangled dramatically at Turn 1, with Max’s car ending up on top of Lewis', his rear tire grazing Hamilton's helmet." },
-    {imageSrc: '/images/MSMonza.jpg', videoSrc: '/MSMonza.mp4', description: "Michael Schumacher's first win at Monza came in 1996, during his debut season with Scuderia Ferrari. Despite Ferrari’s car being less competitive in the 1996 season, Schumacher outperformed expectations, managing tricky race conditions and fending off rivals with precision and determination." },
-    {imageSrc: '/images/PierreMonza.jpg', videoSrc: '/PierreMonza.mp4', description: "Racing for the midfield AlphaTauri team, Gasly pulled off a stunning underdog win holding off intense pressure from Carlos Sainz in the final laps. Gasly kept his composure and crossed the line just 0.4 seconds ahead, making history as the first French winner of a Grand Prix since 1996." },
+    {imageSrc: SebMonzaPic, 
+      alt: "Sebastian Vettel's first win in Monza", 
+      videoSrc: SebMonzaVid, 
+      description: 'In 2008, at a rain-soaked Monza, a 21-year-old Sebastian Vettel stunned the world by winning his first Formula 1 race. Driving for Toro Rosso, he became the youngest-ever winner at the time and gave the team its only victory.' 
+    },
+    {
+      imageSrc: HamVersCrashPic, 
+      videoSrc: HamVersCrashVid, 
+      alt: "Lewis Hamilton and Max Verstappen Crash",
+      description: "During the 2021 Formula 1 Italian Grand Prix, title rivals Max Verstappen and Lewis Hamilton collided in one of the most controversial moments of the season. The title rivals tangled dramatically at Turn 1, with Max’s car ending up on top of Lewis', his rear tire grazing Hamilton's helmet." 
+    },
+    {
+      imageSrc: MSMonzaVid, 
+      videoSrc: MSMonzaPic, 
+      alt: "Michael Schumacher's first Monza Win",
+      description: "Michael Schumacher's first win at Monza came in 1996, during his debut season with Scuderia Ferrari. Despite Ferrari’s car being less competitive in the 1996 season, Schumacher outperformed expectations, managing tricky race conditions and fending off rivals with precision and determination." },
+    {
+      imageSrc: PierreMonzaPic, 
+      videoSrc: PierreMonzaVid, 
+      alt: "Pierre Gasly's first Win",
+      description: "Racing for the midfield AlphaTauri team, Gasly pulled off a stunning underdog win holding off intense pressure from Carlos Sainz in the final laps. Gasly kept his composure and crossed the line just 0.4 seconds ahead, making history as the first French winner of a Grand Prix since 1996." },
   ];
   
 

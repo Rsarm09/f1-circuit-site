@@ -2,6 +2,8 @@ import { useRef } from 'react';
 import './Champions.css';
 import { motion, useInView } from 'framer-motion';
 
+import MichaelSchumacherPic from '/images/MichaelSchumacher.png';
+import LewisHamiltonPic from '/images/LewisHamilton.png';
 
 export default function Champions({ desc }) {
   const containerRef = useRef(null);
@@ -25,7 +27,7 @@ export default function Champions({ desc }) {
         <div className="crt-wrapper">
           <div className="crt-image">
             <motion.img
-              src="/images/MichaelSchumacher.png"
+              src={MichaelSchumacherPic}
               alt="Michael Schumacher"
               initial={{ opacity: 0 }}
               animate={{ opacity: isInView ? [0, 0.2, 0.1, 1] : 0 }}
@@ -54,7 +56,7 @@ export default function Champions({ desc }) {
           <div className="crt-wrapper-2">
             <div className="crt-image-2">
             <motion.img
-              src="/images/LewisHamilton.png"
+              src={LewisHamiltonPic}
               alt="Lewis Hamilton"
               initial={{ opacity: 0 }}
               animate={{ opacity: isInView ? [0, 0.2, 0.1, 1] : 0 }}

@@ -7,9 +7,7 @@ const TrackMap = ({
     pathData,
     viewBox = "0 0 1098 579",
     points,
-    strokeColor = "#C90603",
     strokeWidth = 13,
-    filterId = "track-shadow",
     drszones = [],
     setCursorHidden
 }) => {

@@ -19,10 +19,13 @@ import Champions from '../components/Champions';
 
 import SebMonzaVid from '/SebMonzaVid.mp4';
 import SebMonzaPic from '/images/SebMonzaWin.jpg';
+
 import HamVersCrashVid from '/HamVersCrashVid.mp4';
 import HamVersCrashPic from '/images/HamVersCrash.jpg';
+
 import MSMonzaVid from '/MSMonza.mp4';
 import MSMonzaPic from '/images/MSMonza.jpg';
+
 import PierreMonzaVid from '/PierreMonza.mp4';
 import PierreMonzaPic from '/images/PierreMonza.jpg';
 
@@ -86,8 +89,8 @@ const images = [
       description: "During the 2021 Formula 1 Italian Grand Prix, title rivals Max Verstappen and Lewis Hamilton collided in one of the most controversial moments of the season. The title rivals tangled dramatically at Turn 1, with Max’s car ending up on top of Lewis', his rear tire grazing Hamilton's helmet." 
     },
     {
-      imageSrc: MSMonzaVid, 
-      videoSrc: MSMonzaPic, 
+      imageSrc: MSMonzaPic, 
+      videoSrc: MSMonzaVid, 
       alt: "Michael Schumacher's first Monza Win",
       description: "Michael Schumacher's first win at Monza came in 1996, during his debut season with Scuderia Ferrari. Despite Ferrari’s car being less competitive in the 1996 season, Schumacher outperformed expectations, managing tricky race conditions and fending off rivals with precision and determination." },
     {

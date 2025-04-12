@@ -28,7 +28,6 @@ export default function Gallery() {
 
   useEffect(() => {
 
-    // Calculate the total width of all images in the gallery
     let totalWidth = 0;
 
     imageRefs.current.forEach((img) => {
@@ -40,9 +39,8 @@ export default function Gallery() {
     });
     
 
-    // Animate the gallery from left to right
     gsap.to(imageContainerRef.current, {
-      x: -(totalWidth - window.innerWidth),  // Move gallery from left to right
+      x: totalWidth - window.innerWidth,
       ease: "power2.out",
       scrollTrigger: {
         trigger: '.gallery-section',
